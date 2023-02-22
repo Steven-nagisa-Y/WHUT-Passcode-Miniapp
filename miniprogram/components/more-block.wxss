@@ -1,0 +1,59 @@
+/* components/more-block.wxss */
+.container {
+  border-radius: 4px;
+  width: 100%;
+  --font-large: 1.6rem;
+  --font-small: 0.7rem;
+}
+
+.green {
+  background: linear-gradient(to right, #6cc07b, #99e57a);
+  color: white;
+}
+
+.white {
+  background-color: white;
+}
+
+.blue {
+  color: #4a9cfa;
+}
+
+.container .title {
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .time-show {
+  display: flex;
+  text-align: center;
+  line-height: var(--font-large);
+}
+
+.container .double-line {
+  height: calc(var(--font-small) * 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.container .big-text {
+  font-size: var(--font-large);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.container .small-text {
+  font-size: var(--font-small);
+  word-wrap: break-word;
+  line-height: var(--font-small);
+}

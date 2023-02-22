@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+  <image class="logo-header" src="../../images/logo-header.png" mode="widthFix"></image>
+  <view class="content-header">
+    <image src="{{userData.avatar}}" class="avatar" bindtap="handleSetAvatar"></image>
+    <view class="info">
+      <view class="info-item">
+        <text class="tag">姓名</text><text>：</text><text>{{userData.name}}</text>
+      </view>
+      <view class="info-item">
+        <text class="tag">身份</text><text>：</text><text>{{userData.identity}}</text>
+      </view>
+      <view class="info-item">
+        <text class="tag">证件号</text><text>：</text><text>{{userData.cardId}}</text>
+      </view>
+      <view class="info-item">
+
+      </view>
+    </view>
+  </view>
+  <view class="content">
+    <view class="{{userData.status?'qr-content':'qr-content grey'}}">
+      <view class="timer" class="timer">{{timer}}</view>
+      <!-- <image src="cloud://one-ej2yo.6f6e-one-ej2yo-1301175026/my-photo.png" class="qrcode"></image> -->
+      <canvas class="qrcode" canvas-id="myQRcode"></canvas>
+      <view class="qr-status">
+        <view class="line status">
+          <text>状态：</text>
+          <text class="{{userData.status?'status-ok':'status-forbid'}}"> {{userData.status?'正常':'禁止通行'}}</text>
+        </view>
+        <text class="line info">{{statusInfo}}</text>
+      </view>
+    </view>
+    <view class="more-content">
+      <more-block title="核酸检测" time="72" preContent="小时" content="阴性" blockType="1" style="flex: 1;margin-top:20rpx;margin-right: 20rpx;"></more-block>
+      <more-block title="疫苗接种" time="3" content="次" blockType="0" style="flex: 1;margin-top:20rpx;"></more-block>
+    </view>
+    <view class="more-content" style="margin-top: 20rpx;">
+      <view class="more-item" bindtap="handleNavi" id="checkin">
+        <image src="../../images/checkin.svg" style="width: 2rem;height:2rem;margin-bottom: 10rpx;"></image>
+        <text>扫码出入登记</text>
+      </view>
+      <view class="more-item" bindtap="handleNavi" id="ques">
+        <image src="../../images/ques.png" style="width: 2rem;height:2rem;margin-bottom: 10rpx;"></image>
+        <text>常见问题</text>
+      </view>
+    </view>
+  </view>
+</view>

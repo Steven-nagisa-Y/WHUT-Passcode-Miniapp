@@ -1,0 +1,19 @@
+<!--components/more-block.wxml-->
+<view class="container {{blockType == 1 ? 'green':'white'}}">
+  <view class="title">
+    <image src="{{icon[blockType]}}" style="width:1rem; height:1rem; margin-right: 0.3rem;"></image>
+    <text style="font-size: 0.9rem;">{{title}}</text>
+  </view>
+  <view class="content {{blockType == 0 ? 'blue':''}}">
+    <view class="time-show">
+      <text class="big-text">{{time}}</text>
+      <view class="double-line">
+        <text class="small-text">{{preContent}}</text>
+        <text class="small-text">{{content}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="title small-text">
+    {{staticTime}}
+  </view>
+</view>

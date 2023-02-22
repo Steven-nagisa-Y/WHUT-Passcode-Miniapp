@@ -1,0 +1,35 @@
+<!--pages/editUser/editUser.wxml-->
+<view class="container">
+  <view class="cell" bindtap="handleSetAvatar">
+    <text>修改头像</text>
+    <image src="{{userData.avatar}}" mode="aspectFit" class="avatar"></image>
+  </view>
+  <view class="cell">
+    <text>修改姓名</text>
+    <input id="name" value="{{userData.name?userData.name:''}}" placeholder="输入姓名" bindinput="handleInput" />
+  </view>
+  <view class="cell">
+    <text>修改身份</text>
+    <input id="identity" value="{{userData.identity?userData.identity:''}}" placeholder="本科生/研究生" bindinput="handleInput" />
+  </view>
+  <view class="cell">
+    <text>修改证件号</text>
+    <input id="cardId" type="idcard" value="{{userData.cardId?userData.cardId:''}}" placeholder="证件号开头、末尾各3位" bindinput="handleInput" />
+  </view>
+  <view class="cell">
+    <text>修改学号</text>
+    <input id="schoolNum" type="number" value="{{userData.schoolNum?userData.schoolNum:''}}" placeholder="输入学号" bindinput="handleInput" />
+  </view>
+  <view class="cell">
+    <text>修改状态</text>
+    <picker range="{{statusList}}" value="{{userData.status?0:1}}" bindchange="handlePickerChange">
+      <view class="picker {{userData.status?'green':''}}">
+        {{statusList[userData.status?0:1]}}
+      </view>
+    </picker>
+  </view>
+  <button class="btn" bindtap="handleEmit">提交</button>
+  <text class="hint">生成的二维码不可被扫描</text>
+  <text class="hint">头像文件大小需小于100KB，以加快载入速度</text>
+  <text class="hint">连续点击头像三次即可进入本页</text>
+</view>

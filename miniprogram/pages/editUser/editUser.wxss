@@ -1,0 +1,77 @@
+/* pages/editUser/editUser.wxss */
+page {
+  --color-green: #4cbc4c;
+}
+
+.container {
+  width: 90%;
+  height: 95%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+.container .btn {
+  margin: 40rpx;
+  height: 80rpx;
+  width: 240rpx;
+  border-radius: 40rpx;
+  color: white;
+  text-align: center;
+  background-color: var(--color-green);
+}
+
+.container .cell {
+  width: 100%;
+  min-height: 3rem;
+  text-align: center;
+  border-bottom: 1px solid darkgray;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.container > .cell:first-child {
+  border-top: 1px solid darkgray;
+}
+
+.cell .avatar {
+  flex: 2;
+  height: 200rpx;
+}
+
+.cell > text {
+  flex: 1;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.cell > input {
+  flex: 2;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.cell > picker {
+  flex: 2;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+.cell .picker {
+  width: 100%;
+  font-weight: bold;
+}
+
+.cell .green {
+  color: var(--color-green);
+}
+
+.hint {
+  text-align: center;
+  font-size: 0.7rem;
+  color: darkgray;
+  margin: 0.2rem auto;
+}

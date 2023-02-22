@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "more-block": "../../components/more-block"
+  }
+}

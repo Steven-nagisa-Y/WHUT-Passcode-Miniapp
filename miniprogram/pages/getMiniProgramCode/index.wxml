@@ -1,0 +1,8 @@
+<view>
+  <view class="box_text" wx:if="{{!codeSrc}}">小程序码将展示在这里</view>
+  <view wx:if="{{codeSrc}}" class="code_box">
+    <image class="code_img" src="{{codeSrc}}"></image>
+  </view>
+  <view class="button" bindtap="getCodeSrc" wx:if="{{!haveGetCodeSrc}}">生成小程序码</view>
+  <view class="button_clear" bindtap="clearCodeSrc" wx:if="{{haveGetCodeSrc}}">清空</view>
+</view>
