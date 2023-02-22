@@ -40,7 +40,7 @@
     "ignoreUploadUnusedFiles": true,
     "useStaticServer": true
   },
-  "appid": "wxa24c2356352cc046",
+  "appid": "#Your-appid-here",
   "projectname": "QR-code-gen",
   "libVersion": "2.14.1",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
